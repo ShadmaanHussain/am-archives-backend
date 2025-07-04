@@ -1,0 +1,6 @@
+@am_archives_backend_HostAddress = http://localhost:5269
+
+GET {{am_archives_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
