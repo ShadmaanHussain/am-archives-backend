@@ -15,31 +15,6 @@ namespace am_archives_backend.Controllers
             _logger = logger;
             _httpClientFactory = httpClientFactory;
         }
-        //[HttpGet]
-        //public async Task<ActionResult> GetChapters()
-        //{
-        //    var client = _httpClientFactory.CreateClient();
-        //    var url = $"https://api.mangadex.org/manga?includes[]=cover_art&includes[]=artist&includes[]=author&order[followedCount]=desc&contentRating[]=safe&contentRating[]=suggestive&hasAvailableChapters=true";
-        //    using var request = new HttpRequestMessage(HttpMethod.Get, url);
-        //    request.Headers.Accept.Clear();
-        //    request.Headers.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-        //    request.Headers.Add("User-Agent", "am-archives-backend/1.0 (contact@example.com)");
-
-        //    var response = await client.SendAsync(request);
-
-        //    if (!response.IsSuccessStatusCode)
-        //    {
-        //        return StatusCode((int)response.StatusCode, new { Message = "Failed to fetch chapter from MangaDex" });
-        //    }
-
-        //    var content = await response.Content.ReadAsStringAsync();
-        //    return Content(content, "application/json");
-        //}
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> GetChapterById(string id)
-        //{
-        //    return Ok(new { Message = $"Chapter with ID {id} fetched successfully" });
-        //}
 
         [HttpGet("details/{id}")]
         public async Task<IActionResult> GetChapterDetailsById(string id)
